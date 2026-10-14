@@ -1,0 +1,420 @@
+[
+  {
+    "id": "heart",
+    "name": "Whole heart (overall CAD)",
+    "group": "overview",
+    "role": "This is the overall coronary artery disease (CAD) estimate: the model's probability that at least one major coronary artery is narrowed by 50% or more, based on every measurement entered. It cannot say which artery or where.",
+    "findings": [],
+    "riskFactors": [],
+    "focus": [
+      0,
+      0.35,
+      0
+    ],
+    "zoom": 8.4
+  },
+  {
+    "id": "lv",
+    "name": "Left ventricle",
+    "group": "chamber",
+    "role": "The heart's main pump. It pushes oxygen-rich blood out through the aorta to the whole body, so its muscle works hardest and depends on a steady coronary blood supply, mostly from the LAD and LCX.",
+    "findings": [
+      "EF-TTE",
+      "LVH",
+      "Region RWMA",
+      "CHF",
+      "Dyspnea",
+      "Function Class",
+      "Q Wave",
+      "St Elevation",
+      "StDepression",
+      "Tinversion"
+    ],
+    "note": "These measurements are commonly used to judge how the left ventricle is working. The dataset does not record which wall of the ventricle is affected.",
+    "focus": [
+      0.65,
+      -0.35,
+      -0.1
+    ],
+    "zoom": 5.2
+  },
+  {
+    "id": "rv",
+    "name": "Right ventricle",
+    "group": "chamber",
+    "role": "Pumps oxygen-poor blood to the lungs through the pulmonary trunk. Its wall is thinner than the left ventricle's and is supplied mostly by the RCA.",
+    "findings": [
+      "Edema",
+      "CHF",
+      "Dyspnea",
+      "VHD"
+    ],
+    "note": "Few measurements in this dataset relate directly to the right ventricle, so this region has little to show.",
+    "focus": [
+      -0.3,
+      -0.3,
+      0.6
+    ],
+    "zoom": 5.2
+  },
+  {
+    "id": "ra",
+    "name": "Right atrium",
+    "group": "chamber",
+    "role": "Receives oxygen-poor blood returning from the body through the vena cava and passes it to the right ventricle. The SA node, the heart's natural pacemaker, sits in its wall.",
+    "findings": [
+      "Edema",
+      "VHD"
+    ],
+    "note": "The dataset has very few right-heart measurements.",
+    "focus": [
+      -0.8,
+      0.8,
+      0.1
+    ],
+    "zoom": 5
+  },
+  {
+    "id": "la",
+    "name": "Left atrium",
+    "group": "chamber",
+    "role": "Receives oxygen-rich blood from the lungs through the pulmonary veins and passes it to the left ventricle.",
+    "findings": [
+      "VHD",
+      "Diastolic Murmur",
+      "Lung rales",
+      "Dyspnea"
+    ],
+    "note": "Valve disease and murmurs can change the pressure in this chamber.",
+    "focus": [
+      0.5,
+      0.9,
+      -0.5
+    ],
+    "zoom": 5,
+    "view": [
+      0.2,
+      0.2,
+      -1
+    ]
+  },
+  {
+    "id": "aorta",
+    "name": "Aorta",
+    "group": "vessel",
+    "role": "The body's main artery. Oxygen-rich blood leaves the left ventricle through the aortic valve into it. The left and right coronary arteries branch from its root and feed the heart muscle itself.",
+    "findings": [
+      "BP",
+      "HTN",
+      "Systolic Murmur",
+      "Diastolic Murmur",
+      "Weak Peripheral Pulse",
+      "VHD"
+    ],
+    "note": "Blood pressure and valve findings relate to the load on the aorta and the aortic valve.",
+    "focus": [
+      0.1,
+      1.6,
+      -0.1
+    ],
+    "zoom": 5.4
+  },
+  {
+    "id": "pulm",
+    "name": "Pulmonary trunk and arteries",
+    "group": "vessel",
+    "role": "Carry oxygen-poor blood from the right ventricle to the two lungs, where it picks up oxygen.",
+    "findings": [
+      "Lung rales",
+      "Dyspnea",
+      "Airway disease"
+    ],
+    "note": "Lung-related findings are the closest measurements in this dataset.",
+    "focus": [
+      0.4,
+      1.6,
+      0.1
+    ],
+    "zoom": 5.4
+  },
+  {
+    "id": "svc",
+    "name": "Superior vena cava",
+    "group": "vessel",
+    "role": "Returns oxygen-poor blood from the head, neck and arms to the right atrium.",
+    "findings": [
+      "Edema"
+    ],
+    "note": "Very little in this dataset relates to the vena cava.",
+    "focus": [
+      -0.75,
+      1.6,
+      0
+    ],
+    "zoom": 5.4
+  },
+  {
+    "id": "pv",
+    "name": "Pulmonary veins",
+    "group": "vessel",
+    "role": "Carry oxygen-rich blood from the lungs into the left atrium.",
+    "findings": [
+      "Lung rales",
+      "Dyspnea"
+    ],
+    "note": "Lung findings are the closest measurements in this dataset.",
+    "focus": [
+      1.1,
+      0.85,
+      -0.7
+    ],
+    "zoom": 5.2,
+    "view": [
+      0.4,
+      0.1,
+      -1
+    ]
+  },
+  {
+    "id": "lad",
+    "name": "LAD: Left Anterior Descending artery",
+    "group": "coronary",
+    "role": "Supplies blood to the front of the heart: the front wall of the left ventricle and much of the wall between the ventricles. A narrowing here can reduce blood flow to a large part of the main pumping chamber.",
+    "findings": [
+      "Region RWMA",
+      "St Elevation",
+      "Q Wave",
+      "Poor R Progression"
+    ],
+    "riskFactors": [
+      "Age",
+      "Sex",
+      "DM",
+      "HTN",
+      "DLP",
+      "LDL",
+      "HDL",
+      "TG",
+      "FBS",
+      "Current Smoker",
+      "EX-Smoker",
+      "FH",
+      "Obesity",
+      "BMI",
+      "CRF"
+    ],
+    "note": "These are general clinical associations. The dataset records neither the ECG lead nor the wall, so they cannot place disease in this artery.",
+    "focus": null,
+    "zoom": 5
+  },
+  {
+    "id": "lcx",
+    "name": "LCX: Left Circumflex artery",
+    "group": "coronary",
+    "role": "Supplies blood to the side and back of the heart (the lateral and posterior left ventricle). It wraps around the heart in the groove between the left atrium and ventricle.",
+    "findings": [
+      "Region RWMA",
+      "Tinversion",
+      "StDepression"
+    ],
+    "riskFactors": [
+      "Age",
+      "Sex",
+      "DM",
+      "HTN",
+      "DLP",
+      "LDL",
+      "HDL",
+      "TG",
+      "FBS",
+      "Current Smoker",
+      "EX-Smoker",
+      "FH",
+      "Obesity",
+      "BMI",
+      "CRF"
+    ],
+    "note": "These are general clinical associations. The dataset does not record which ECG lead or wall was affected, so they cannot place disease in this artery. Disease in this artery can be hard to spot on a standard ECG, so ECG findings alone are a weak guide for it.",
+    "focus": null,
+    "zoom": 5
+  },
+  {
+    "id": "rca",
+    "name": "RCA: Right Coronary Artery",
+    "group": "coronary",
+    "role": "Supplies blood to the right side and bottom of the heart: the right ventricle and the underside of the left ventricle. In most people it also feeds the SA and AV nodes.",
+    "findings": [
+      "Region RWMA",
+      "Q Wave",
+      "St Elevation"
+    ],
+    "riskFactors": [
+      "Age",
+      "Sex",
+      "DM",
+      "HTN",
+      "DLP",
+      "LDL",
+      "HDL",
+      "TG",
+      "FBS",
+      "Current Smoker",
+      "EX-Smoker",
+      "FH",
+      "Obesity",
+      "BMI",
+      "CRF"
+    ],
+    "note": "These are general clinical associations. The dataset does not record which ECG lead or wall was affected, so they cannot place disease in this artery.",
+    "focus": null,
+    "zoom": 5
+  },
+  {
+    "id": "gcv",
+    "name": "Great cardiac vein",
+    "group": "vein",
+    "role": "Runs up the front of the heart beside the LAD, then curves around the left side in the groove beside the LCX to reach the coronary sinus. It drains blood from the same front and left-side muscle that those two arteries feed. Coronary artery disease narrows arteries, not veins; the vein is shown for orientation.",
+    "findings": [],
+    "riskFactors": [],
+    "note": "No measurement in this dataset relates to the cardiac veins. Shown for anatomy only.",
+    "focus": [
+      0.61,
+      0.1,
+      0.68
+    ],
+    "zoom": 5
+  },
+  {
+    "id": "mcv",
+    "name": "Middle cardiac vein",
+    "group": "vein",
+    "role": "Runs in the groove on the underside of the heart, alongside the posterior descending artery, and drains the back and bottom of both ventricles into the coronary sinus.",
+    "findings": [],
+    "riskFactors": [],
+    "note": "No measurement in this dataset relates to the cardiac veins. Shown for anatomy only.",
+    "focus": [
+      -0.47,
+      -0.31,
+      -0.59
+    ],
+    "zoom": 5,
+    "view": [
+      -0.2,
+      0,
+      -1
+    ]
+  },
+  {
+    "id": "cs",
+    "name": "Coronary sinus",
+    "group": "vein",
+    "role": "A wide vein on the back of the heart, in the groove between the atria and the ventricles. It collects blood from most of the heart's own veins and empties it into the right atrium.",
+    "findings": [],
+    "riskFactors": [],
+    "note": "No measurement in this dataset relates to the cardiac veins. Shown for anatomy only.",
+    "focus": [
+      -0.29,
+      0.61,
+      -0.65
+    ],
+    "zoom": 5,
+    "view": [
+      -0.1,
+      0.1,
+      -1
+    ]
+  },
+  {
+    "id": "sa_node",
+    "name": "SA node (sinoatrial node)",
+    "group": "conduction",
+    "role": "The heart's natural pacemaker: a small cluster of cells in the right atrium wall that starts every heartbeat and sets the heart rate. The signal then spreads across both atria.",
+    "findings": [
+      "PR",
+      "Thyroid Disease",
+      "K",
+      "Na"
+    ],
+    "note": "In this dataset PR is the pulse rate. There is no rhythm recording, so nothing here shows whether the signal is disrupted.",
+    "focus": [
+      -1.0,
+      1.0,
+      0.15
+    ],
+    "zoom": 4.6
+  },
+  {
+    "id": "av_node",
+    "name": "AV node (atrioventricular node)",
+    "group": "conduction",
+    "role": "A gatekeeper between the atria and the ventricles. It briefly delays the signal so the ventricles can fill with blood before they contract.",
+    "findings": [
+      "PR",
+      "K",
+      "Na"
+    ],
+    "note": "In this dataset PR is the pulse rate. There is no rhythm recording.",
+    "focus": [
+      -0.18,
+      0.52,
+      -0.08
+    ],
+    "zoom": 4.6
+  },
+  {
+    "id": "his",
+    "name": "Bundle of His",
+    "group": "conduction",
+    "role": "The normal electrical bridge from the atria to the ventricles. It carries the signal from the AV node into the wall between the two ventricles.",
+    "findings": [],
+    "note": "No measurement in this dataset relates to this structure. It is shown for anatomy only.",
+    "focus": [
+      -0.05,
+      0.3,
+      -0.05
+    ],
+    "zoom": 4.6
+  },
+  {
+    "id": "rbb",
+    "name": "Right bundle branch",
+    "group": "conduction",
+    "role": "Carries the signal down the right side of the wall between the ventricles toward the right ventricle.",
+    "findings": [],
+    "note": "No measurement in this dataset relates to this structure. It is shown for anatomy only.",
+    "focus": [
+      -0.1,
+      -0.4,
+      0.1
+    ],
+    "zoom": 4.8
+  },
+  {
+    "id": "lbb",
+    "name": "Left bundle branch",
+    "group": "conduction",
+    "role": "Carries the signal down the left side of the wall between the ventricles and divides into fascicles that serve the left ventricle.",
+    "findings": [],
+    "note": "No measurement in this dataset relates to this structure. It is shown for anatomy only.",
+    "focus": [
+      0.1,
+      -0.4,
+      -0.1
+    ],
+    "zoom": 4.8
+  },
+  {
+    "id": "purkinje",
+    "name": "Purkinje fibres",
+    "group": "conduction",
+    "role": "A fine network under the inner lining of the ventricles that spreads the signal quickly, so the ventricles contract together from the bottom (apex) upward.",
+    "findings": [],
+    "note": "No measurement in this dataset relates to this structure. It is shown for anatomy only.",
+    "focus": [
+      0.3,
+      -0.9,
+      0.1
+    ],
+    "zoom": 4.8
+  }
+]
